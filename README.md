@@ -95,6 +95,29 @@ python app.py --port=8888 --host=0.0.0.0 --debug=true
 
 访问 `GET /health` 可以检查服务状态。
 
+## 远程测试
+
+项目提供了专门的远程测试脚本，用于测试部署在测试机上的服务：
+
+### 快速测试
+```bash
+python quick_test.py
+```
+
+### 完整测试
+```bash
+# 测试远程服务（默认）
+python test_remote_services.py
+
+# 测试本地服务
+python test_remote_services.py --local
+
+# 测试自定义地址
+python test_remote_services.py http://your-server:8888
+```
+
+详细使用说明请参考 `REMOTE_TEST_README.md`。
+
 ## 许可证
 
 MIT License 
