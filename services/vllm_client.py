@@ -6,7 +6,7 @@ class VLLMClient:
     """
     vllm server API 客户端，支持OpenAI兼容接口
     """
-    def __init__(self, base_url: str = "http://localhost:9001/v1/completions", timeout: int = 60):
+    def __init__(self, base_url: str = "http://localhost:9001/v1/chat/completions", timeout: int = 60):
         self.base_url = base_url
         self.timeout = timeout
         self.logger = logging.getLogger(self.__class__.__name__)
