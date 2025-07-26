@@ -1,0 +1,85 @@
+{
+  "test_time": "2025-07-12T01:59:49.459441",
+  "target_url": "http://115.231.130.211:8888",
+  "total_tests": 11,
+  "success_count": 11,
+  "results": [
+    {
+      "test_name": "网络连通性",
+      "success": true,
+      "response_time": 0.01321864128112793,
+      "error": null,
+      "timestamp": "2025-07-12T01:59:49.472798"
+    },
+    {
+      "test_name": "健康检查",
+      "success": true,
+      "response_time": 0.558845043182373,
+      "error": null,
+      "timestamp": "2025-07-12T01:59:50.031707"
+    },
+    {
+      "test_name": "文本服务-bidding_product",
+      "success": true,
+      "response_time": 0.5047857761383057,
+      "error": null,
+      "timestamp": "2025-07-12T01:59:50.536988"
+    },
+    {
+      "test_name": "文本服务-winning_product",
+      "success": true,
+      "response_time": 0.49111390113830566,
+      "error": null,
+      "timestamp": "2025-07-12T01:59:51.028389"
+    },
+    {
+      "test_name": "文本服务-code_extraction",
+      "success": true,
+      "response_time": 0.49782395362854004,
+      "error": null,
+      "timestamp": "2025-07-12T01:59:51.526545"
+    },
+    {
+      "test_name": "文本服务-district_time",
+      "success": true,
+      "response_time": 1.0838699340820312,
+      "error": null,
+      "timestamp": "2025-07-12T01:59:52.610962"
+    },
+    {
+      "test_name": "文本服务-notice_type",
+      "success": true,
+      "response_time": 0.4941518306732178,
+      "error": null,
+      "timestamp": "2025-07-12T01:59:53.105472"
+    },
+    {
+      "test_name": "文本服务-bid_type",
+      "success": true,
+      "response_time": 0.4994380474090576,
+      "error": null,
+      "timestamp": "2025-07-12T01:59:53.605773"
+    },
+    {
+      "test_name": "文本服务-contact_info",
+      "success": true,
+      "response_time": 0.5174508094787598,
+      "error": null,
+      "timestamp": "2025-07-12T01:59:54.123693"
+    },
+    {
+      "test_name": "多模态服务-pdf",
+      "success": true,
+      "response_time": 0.5146770477294922,
+      "error": null,
+      "timestamp": "2025-07-12T01:59:54.638749"
+    },
+    {
+      "test_name": "多模态服务-images",
+      "success": true,
+      "response_time": 0.51560378074646,
+      "error": null,
+      "timestamp": "2025-07-12T01:59:55.154800"
+    }
+  ]
+}
