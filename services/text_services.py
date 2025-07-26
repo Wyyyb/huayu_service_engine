@@ -36,6 +36,37 @@ class BiddingProductService(BaseService):
             self.logger.error(f"bidding_product服务异常: {e}")
             return self.format_response(False, error=str(e))
 
+class WinningProductService(BaseService):
+    """中标公告产品服务（真实实现）"""
+    def __init__(self):
+        super().__init__()
+        self.vllm = VLLMClient()
+        self.service_type = "winning_product"
+        self.fields = get_service_fields(self.service_type)
+
+    def process(self, notice_id: str, content: str, extra_info: Dict[str, Any]) -> Dict[str, Any]:
+        if not self.validate_input(notice_id, content, extra_info):
+            return self.format_response(False, error="Invalid input parameters")
+        try:
+            prompt = get_prompt(self.service_type, content)
+            llm_output = self.vllm.chat_completion(prompt)
+            if not llm_output:
+                return self.format_response(False, error="大模型无返回或异常")
+            table = parse_markdown_table(llm_output)
+            products = []
+            for row in table:
+                prod = {field: row.get(field, "空") for field in self.fields}
+                products.append(prod)
+            result = {
+                'notice_id': notice_id,
+                'service_type': self.service_type,
+                'winning_products': products
+            }
+            return self.format_response(True, data=result)
+        except Exception as e:
+            self.logger.error(f"winning_product服务异常: {e}")
+            return self.format_response(False, error=str(e))
+
 class CodeExtractionService(BaseService):
     """编号提取服务（真实实现）"""
     def __init__(self):
