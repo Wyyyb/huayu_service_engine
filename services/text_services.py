@@ -3,6 +3,7 @@ from .base_service import BaseService
 from .vllm_client import VLLMClient
 from .prompt_templates import get_prompt, get_service_fields
 from .markdown_parser import parse_markdown_table
+from .json_parser import safe_json_parse
 import json
 
 class BiddingProductService(BaseService):
@@ -83,13 +84,12 @@ class CodeExtractionService(BaseService):
             llm_output = self.vllm.chat_completion(prompt)
             if not llm_output:
                 return self.format_response(False, error="大模型无返回或异常")
-            # 解析JSON
-            try:
-                data = json.loads(llm_output)
-            except Exception:
-                # 容错：尝试提取JSON片段
-                match = json.JSONDecoder().raw_decode(llm_output)
-                data = match[0] if match else {}
+            
+            # 记录LLM原始输出
+            self.logger.info(f"CodeExtractionService LLM输出: {llm_output}")
+            
+            # 使用安全的JSON解析器
+            data = safe_json_parse(llm_output, {})
             codes = {field: data.get(field, "空") for field in self.fields}
             result = {
                 'notice_id': notice_id,
@@ -117,11 +117,12 @@ class DistrictTimeService(BaseService):
             llm_output = self.vllm.chat_completion(prompt)
             if not llm_output:
                 return self.format_response(False, error="大模型无返回或异常")
-            try:
-                data = json.loads(llm_output)
-            except Exception:
-                match = json.JSONDecoder().raw_decode(llm_output)
-                data = match[0] if match else {}
+            
+            # 记录LLM原始输出
+            self.logger.info(f"DistrictTimeService LLM输出: {llm_output}")
+            
+            # 使用安全的JSON解析器
+            data = safe_json_parse(llm_output, {})
             district_time = {field: data.get(field, "空") for field in self.fields}
             result = {
                 'notice_id': notice_id,
@@ -149,11 +150,12 @@ class NoticeTypeService(BaseService):
             llm_output = self.vllm.chat_completion(prompt)
             if not llm_output:
                 return self.format_response(False, error="大模型无返回或异常")
-            try:
-                data = json.loads(llm_output)
-            except Exception:
-                match = json.JSONDecoder().raw_decode(llm_output)
-                data = match[0] if match else {}
+            
+            # 记录LLM原始输出
+            self.logger.info(f"NoticeTypeService LLM输出: {llm_output}")
+            
+            # 使用安全的JSON解析器
+            data = safe_json_parse(llm_output, {})
             notice_type = {field: data.get(field, "空") for field in self.fields}
             result = {
                 'notice_id': notice_id,
@@ -181,11 +183,12 @@ class BidTypeService(BaseService):
             llm_output = self.vllm.chat_completion(prompt)
             if not llm_output:
                 return self.format_response(False, error="大模型无返回或异常")
-            try:
-                data = json.loads(llm_output)
-            except Exception:
-                match = json.JSONDecoder().raw_decode(llm_output)
-                data = match[0] if match else {}
+            
+            # 记录LLM原始输出
+            self.logger.info(f"BidTypeService LLM输出: {llm_output}")
+            
+            # 使用安全的JSON解析器
+            data = safe_json_parse(llm_output, {})
             bid_type = {field: data.get(field, "空") for field in self.fields}
             result = {
                 'notice_id': notice_id,
