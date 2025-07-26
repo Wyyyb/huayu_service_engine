@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="185e0aad-3375-4cb9-ae2f-6ad08f44be8e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/services/text_services.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/text_services.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_remote_services.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_remote_services.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VLLM_SERVER_README.md" beforeDir="false" afterPath="$PROJECT_DIR$/VLLM_SERVER_README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/start_vllm_quick.sh" beforeDir="false" afterPath="$PROJECT_DIR$/start_vllm_quick.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,21 +17,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Wyyyb"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Wyyyb&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "git@github.com:Wyyyb/huayu_service_engine.git",
-    "accountId": "7adc8072-74d0-41a7-927f-1722db5cc2a3"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:Wyyyb/huayu_service_engine.git&quot;,
+    &quot;accountId&quot;: &quot;7adc8072-74d0-41a7-927f-1722db5cc2a3&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2zlGTbGrUE8AMkonXvMQ8TGPm8H" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -40,6 +41,7 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "/Users/y726wang/mydisk/2025/2025_git/huayu_service_engine"
   }

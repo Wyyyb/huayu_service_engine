@@ -6,7 +6,7 @@
 set -e
 
 # 配置参数
-MODEL_NAME="Qwen/Qwen2.5-7B-Instruct"
+MODEL_NAME="Qwen/Qwen3-8B"
 PORT=9001
 HOST="0.0.0.0"
 

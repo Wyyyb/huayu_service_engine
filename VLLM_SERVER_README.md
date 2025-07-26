@@ -81,7 +81,7 @@
 ### 默认配置
 
 ```bash
-MODEL_NAME="Qwen/Qwen2.5-7B-Instruct"  # 模型名称
+MODEL_NAME="Qwen/Qwen3-8B"  # 模型名称
 PORT=9001                              # 服务端口
 HOST="0.0.0.0"                         # 监听地址
 MAX_MODEL_LEN=8192                     # 最大模型长度
