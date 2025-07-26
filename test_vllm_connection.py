@@ -39,7 +39,7 @@ def test_vllm_connection():
     
     try:
         payload = {
-            "model": "Qwen3-8B",
+            "model": "Qwen/Qwen3-8B",
             "messages": [
                 {"role": "user", "content": test_prompt}
             ],

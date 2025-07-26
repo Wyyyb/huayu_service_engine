@@ -17,7 +17,7 @@ class VLLMClient:
         """
         headers = {"Content-Type": "application/json"}
         payload = {
-            "model": "Qwen3-8B",
+            "model": "Qwen/Qwen3-8B",
             "messages": [
                 {"role": "user", "content": prompt}
             ],
